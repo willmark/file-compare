@@ -1,6 +1,6 @@
 {
   "name": "file-compare",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Compare two file hashes and callback result",
   "homepage": "https://github.com/willmark/file-compare",
   "author": {
