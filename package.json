@@ -23,9 +23,4 @@
   ],
   "readme": "file-compare\n============\n\nCompare two files hash values\n",
   "readmeFilename": "README.md",
-  "_id": "file-compare@0.0.1",
-  "dist": {
-    "shasum": "be2efa1afe59075ec0ce7ce4392920a993a46da3"
-  },
-  "_from": "../file-compare"
 }
