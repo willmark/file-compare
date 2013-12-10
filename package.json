@@ -1,0 +1,31 @@
+{
+  "name": "file-compare",
+  "version": "0.0.1",
+  "description": "Compare two file hashes and callback result",
+  "homepage": "https://github.com/willmark/file-compare",
+  "author": {
+    "name": "Mark Williams",
+    "email": "mark@togglebit.org",
+    "url": "http://togglebit.org/"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "engine": {
+    "node": "0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "hash",
+    "compare",
+    "file comparison"
+  ],
+  "readme": "file-compare\n============\n\nCompare two files hash values\n",
+  "readmeFilename": "README.md",
+  "_id": "file-compare@0.0.1",
+  "dist": {
+    "shasum": "be2efa1afe59075ec0ce7ce4392920a993a46da3"
+  },
+  "_from": "../file-compare"
+}
