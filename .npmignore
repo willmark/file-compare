@@ -2,3 +2,7 @@
 test.js
 file1
 file2
+Gruntfile
+dist
+src-pp
+node_modules
