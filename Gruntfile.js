@@ -12,6 +12,9 @@ module.exports = function(grunt) {
     jshint : {
       'files': ['*.js']
     },
+    nodeunit: {
+      all: ['test.js']
+    },
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -29,10 +32,14 @@ module.exports = function(grunt) {
   //verify  script
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
+  //run tests
+  grunt.loadNpmTasks('grunt-contrib-nodeunit');
+
   // Preprocessing to strip out development code
   grunt.loadNpmTasks('grunt-preprocess');
+  
 
   // Default task(s).
-  grunt.registerTask('default', ['jshint', 'preprocess', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'nodeunit', 'preprocess', 'uglify']);
 
 };
