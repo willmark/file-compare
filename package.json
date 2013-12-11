@@ -1,6 +1,6 @@
 {
   "name": "file-compare",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "description": "Compare two file hashes and callback result",
   "homepage": "https://github.com/willmark/file-compare",
   "author": {
@@ -21,6 +21,5 @@
     "compare",
     "file comparison"
   ],
-  "readme": "file-compare\n============\n\nCompare two files hash values\n",
   "readmeFilename": "README.md"
 }
