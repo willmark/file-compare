@@ -15,7 +15,8 @@ exports.compare = function() {
     var file2 = arguments[1];
     var algo = 'sha1';
     var callback = arguments[2];
-
+    
+    // @ifdef DEBUG
     if (typeof arguments[0] != 'string') throw new Error("File1 must be a string");
     if (typeof arguments[1] != 'string') throw new Error("File2 must be a string");
     if (arguments.length == 4) {
@@ -28,8 +29,8 @@ exports.compare = function() {
     } else {
         throw new Error("Invalid args length: " + arguments.length);
     }
+    // @endif
 
-        //throw new Error(typeof arguments[2]);
     /**
     * Call the hash algorithms for each file, and send result to callback
     */
