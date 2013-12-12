@@ -34,10 +34,14 @@ exports.compare = function() {
     /**
     * Call the hash algorithms for each file, and send result to callback
     */
-    computeHash(file2, algo, function (file2hash) {
-        computeHash(file1, algo, function (file1hash) {
-                callback(file1hash === file2hash);
-        });
+    computeHash(file2, algo, function (file2hash, err) {
+        if (err) {
+           callback(false, err);
+        } else {
+           computeHash(file1, algo, function (file1hash, err) {
+              callback(file1hash === file2hash, err);
+           });
+        }
     });
 };
 
@@ -53,7 +57,7 @@ computeHash = function(filename, algo, callback) {
     var s = fs.ReadStream(filename);
     s.on('error', function (err) {
         //no file, hash will be zero
-        callback(0);
+        callback(0, err);
     });
     s.on('data', function (d) {
         chksum.update(d);
