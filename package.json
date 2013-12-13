@@ -8,6 +8,10 @@
     "email": "mark@togglebit.org",
     "url": "http://togglebit.org/"
   },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/willmark/file-compare.git"
+  },
   "scripts": {
     "test": "node test.js"
   },
