@@ -41,7 +41,7 @@ exports.invalidArgsFails = function(a) {
     a.expect(1);
     a.throws(function() {
         comparator.compare("./file1", "./file1", "hhh", "bbb", "ccc");
-    }, /Invalid args length: 5/);
+    }, /Callback required/);
     a.done();
 };
 
@@ -57,6 +57,15 @@ exports.filesSameFalse = function(a) {
 exports.filesDifferTrue = function(a) {
     a.expect(1);
     comparator.compare("./file1", "./file2", function(result, err) {
+        a.ok(!result);
+        a.done();
+    });
+};
+
+exports.srcFileNotExist = function(a) {
+    comparator = require("./index");
+    a.expect(1);
+    comparator.compare("./fileNoFile1", "./file1", function(result, err) {
         a.ok(!result);
         a.done();
     });

@@ -8,9 +8,9 @@
     "email": "mark@togglebit.org",
     "url": "http://togglebit.org/"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/willmark/file-compare.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/willmark/file-compare.git"
   },
   "scripts": {
     "test": "node test.js"
@@ -18,7 +18,9 @@
   "engine": {
     "node": "0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "vargs": "~0.1.0"
+  },
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-preprocess": "~3.0.1",
