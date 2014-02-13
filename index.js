@@ -51,7 +51,7 @@ exports.compare = function() {
 /**
  * Create a new hash of given file name
  */
-computeHash = function(filename, algo, callback) {
+function computeHash(filename, algo, callback) {
     var crypto = require('crypto');
     var fs = require('fs');
 
@@ -71,4 +71,4 @@ computeHash = function(filename, algo, callback) {
         //util.debug(d + '  ' + filename);
         callback(d);
     });
-};
+}

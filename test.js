@@ -1,7 +1,7 @@
 
-comparator = require("./index");
 
 exports.noArgsFails = function(a) {
+    var comparator = require("./index");
     a.expect(1);
     a.throws(function() {
         comparator.compare();
@@ -10,7 +10,7 @@ exports.noArgsFails = function(a) {
 };
 
 exports.noCallbackFails = function(a) {
-    comparator = require("./index");
+    var comparator = require("./index");
     a.expect(1);
     a.throws(function() {
         comparator.compare("./file1", "./file1");
@@ -19,7 +19,7 @@ exports.noCallbackFails = function(a) {
 };
 
 exports.badDigestFails = function(a) {
-    comparator = require("./index");
+    var comparator = require("./index");
     a.expect(1);
     a.throws(function() {
         comparator.compare("./file1", "./file1", "aaa", function() {});
@@ -28,7 +28,7 @@ exports.badDigestFails = function(a) {
 };
 
 exports.badCallbackFails = function(a) {
-    comparator = require("./index");
+    var comparator = require("./index");
     a.expect(1);
     a.throws(function() {
         comparator.compare("./file1", "./file1", "sha1", "badcallback");
@@ -37,7 +37,7 @@ exports.badCallbackFails = function(a) {
 };
 
 exports.invalidArgsFails = function(a) {
-    comparator = require("./index");
+    var comparator = require("./index");
     a.expect(1);
     a.throws(function() {
         comparator.compare("./file1", "./file1", "hhh", "bbb", "ccc");
@@ -46,7 +46,7 @@ exports.invalidArgsFails = function(a) {
 };
 
 exports.filesSameFalse = function(a) {
-    comparator = require("./index");
+    var comparator = require("./index");
     a.expect(1);
     comparator.compare("./file1", "./file1", function(result, err) {
         a.ok(result);
@@ -55,6 +55,7 @@ exports.filesSameFalse = function(a) {
 };
 
 exports.filesDifferTrue = function(a) {
+    var comparator = require("./index");
     a.expect(1);
     comparator.compare("./file1", "./file2", function(result, err) {
         a.ok(!result);
@@ -63,7 +64,7 @@ exports.filesDifferTrue = function(a) {
 };
 
 exports.srcFileNotExist = function(a) {
-    comparator = require("./index");
+    var comparator = require("./index");
     a.expect(1);
     comparator.compare("./fileNoFile1", "./file1", function(result, err) {
         a.ok(!result);
