@@ -3,7 +3,7 @@ file-compare
 
 > Stability - 2 Unstable
 
-Compare two files hash values
+Compare two files hash values 
 
 ## API
 
